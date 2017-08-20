@@ -6,6 +6,8 @@
  */
 
 #include <stdint.h>
+#include <memory.h>
+
 #include "mid_can_ctrl_gen_il.h"
 
 
