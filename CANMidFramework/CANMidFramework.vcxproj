@@ -142,6 +142,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="MainFile.cpp" />
+    <ClCompile Include="mid_can_ctrl_gen_il.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mid_can_ctrl_gen_il.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
