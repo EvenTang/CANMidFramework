@@ -26,4 +26,30 @@ CANOpResult UnpackMessageToSignal(
 	uint8_t _signal_value_byte_size);
 	
 
+	
+/*****************************************************
+   @@@ Rx signal get value function
+*****************************************************/<%
+
+def SizeToType(size) 
+	case size
+	when 0..8
+	    "uint8_t"
+	when 9..16
+	    "uint16_t"
+	when 17..32
+	    "uint32_t"
+	else
+	    "ErrorType"
+	end	
+end
+
+messages_recieved_by_me.each do |msg|
+    msg.signals.each do |sig| puts sig.size %>
+CANOpResult CAN_Mid_RxSigGet<%= sig.name %>(<%=SizeToType(sig.size)%> * _value);  <%
+    end
+end
+%>
+
+
 #endif

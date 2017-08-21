@@ -37,14 +37,14 @@ BU_: ECU1 ECU2 ECU3 ECU4
 
 
 BO_ 123 Message1: 1 ECU2
- SG_ Signal1 : 5|1@1- (1,0) [0|1] ""  ECU3
- SG_ Signal2 : 4|1@1- (1,0) [0|1] ""  ECU3
+ SG_ Signal1 : 5|1@1- (1,0) [0|1] ""  ECU1
+ SG_ Signal2 : 4|1@1- (1,0) [0|1] ""  ECU1
  SG_ Signal3 : 0|4@1- (1,0) [0|8] ""  ECU3
 
-BO_ 124 Message2: 1 ECU2
- SG_ Signal4 : 0|8@1+ (1,0) [0|255] ""  ECU3
+BO_ 124 Message2: 2 ECU2
+ SG_ Signal4 : 0|8@1+ (1,0) [0|255] ""  ECU1
 
-BO_ 153 Message3: 1 ECU1
+BO_ 153 Message3: 3 ECU1
  SG_ Signal5 : 0|8@1+ (1,0) [0|255] ""  ECU3
 
 

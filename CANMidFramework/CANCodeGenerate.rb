@@ -1,6 +1,12 @@
 #require "DBCAnalyzer"
 require File.dirname(__FILE__) + '/DBCAnalyzer'
 
+
+def FormatStr(str, indent)
+	sprintf("%-#{indent}s", str)
+end
+
+
 target_ECU = "ECU1"
 
 puts "Start Parsing!"

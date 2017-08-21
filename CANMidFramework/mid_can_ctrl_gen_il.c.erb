@@ -9,6 +9,16 @@
 
 #include "mid_can_ctrl_gen_il.h"
 
+<%
+puts messages_recieved_by_me
+msg_size_acc = 0
+messages_recieved_by_me.each do |msg|
+%>
+<%= FormatStr("#define RX_MSG_BUFF_INDEX_#{msg.name}", 60) %>(<%= msg_size_acc %>) <%
+    msg_size_acc += msg.size
+end
+%>
+
 
 CANOpResult UnpackMessageToSignal(
 	uint8_t const * _msg_buff,
