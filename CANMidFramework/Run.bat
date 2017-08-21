@@ -1,2 +1,2 @@
-ruby .\DBCAnalyzer.rb Test.dbc
+ruby .\CANCodeGenerate.rb Test.dbc
 pause

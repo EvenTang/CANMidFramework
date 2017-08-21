@@ -6,7 +6,8 @@
  *    @brief
  *
  */
- 
+
+#include <stdint.h>
  
  
 typedef enum _CANOpResult
@@ -16,6 +17,13 @@ typedef enum _CANOpResult
 	PARAMETER_ERROR
 } CANOpResult;
 
+CANOpResult UnpackMessageToSignal(
+	uint8_t const * _msg_buff,
+	uint8_t _msg_buff_size,
+	uint8_t _start_bit,
+	uint8_t _signal_len,
+	uint8_t * _p_signal_value,
+	uint8_t _signal_value_byte_size);
+	
 
- 
- #endif
+#endif

@@ -2,6 +2,8 @@
 
 require "erb" 
 
+module CANDBC
+
 class CANSignal
     attr_accessor :name, :start_bit, :size, :is_big_endian, :is_unsigned
     attr_accessor :factor, :offset, :minimun, :maximun, :unit, :receivers, :attributes
@@ -114,6 +116,9 @@ class CAN_DBC_Analzyer
     end
 end
 
+end
+
+=begin
 
 puts "Start Parsing!"
 analyzer = CAN_DBC_Analzyer.new
@@ -141,3 +146,4 @@ if ARGV.size > 0 and ARGV[0] =~ /.*\.dbc/
     end
 #=end
 end
+=end
